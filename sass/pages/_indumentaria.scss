@@ -1,0 +1,9 @@
+@use "../utilities/variables" as v;
+@use "../utilities/mixin" as m;
+.aparte{
+    @extend flex-start;
+    gap: 600px;
+    @include m.mobile{
+        gap: 50px;
+     }
+}

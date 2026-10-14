@@ -1,0 +1,22 @@
+@use "../utilities/variables" as v;
+@use "../utilities/mixin" as m;
+ .envios-header{
+    @extend flex-start;
+    gap: 600px;
+    @include m.mobile{
+        gap: 50px;
+        
+        .subtitulo-envio{
+            text-align: center;
+            font-size: 2rem;
+            text-decoration: underline;
+            padding: 30px;
+            margin: 0;
+        }
+   }
+}
+.link-envio{
+    border: none;
+    text-decoration: underline;
+    gap: 0;
+}

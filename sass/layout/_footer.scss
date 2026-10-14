@@ -1,0 +1,40 @@
+@use "../utilities/variables" as v;
+.instagram{
+    position: fixed;
+    height: 60px;
+    bottom: 10px;
+    right: 10px;
+    @include m.mobile{
+        height: 30px;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+.facebook{
+    position: fixed;
+    height: 60px;
+    bottom: 10px;
+    right: 120px;
+    @include m.mobile{
+        height: 30px;
+        bottom: 10px;
+        right: 50px;
+    }
+}
+.twitter{
+    position: fixed;
+    height: 70px;
+    bottom: 10px;
+    right: 230px;
+    @include m.mobile{
+        height: 35px;
+        bottom: 10px;
+        right: 85px;
+    }
+}
+.copyright{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 12px;
+    }

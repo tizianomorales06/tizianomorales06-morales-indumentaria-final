@@ -1,0 +1,13 @@
+%extend flex-start{
+    display: flex;
+    justify-content: flex-start;
+    /*--TIPOGRAFIAS--*/
+    }
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+/*  font-family: "Oswald", sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Meie+Script&display=swap');
+/*font-family: "Meie Script", cursive;*/
+ $bg-color:#F1F7ED;
+ $font-principal: "Oswald", sans-serif;
+ $font-secundaria: "Meie Script", cursive;
+ 

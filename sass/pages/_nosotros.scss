@@ -1,0 +1,35 @@
+@use "../utilities/variables" as v;
+@use "../utilities/mixin" as m;
+.aparte{
+    @extend flex-start;
+    gap: 600px;
+    @include m.mobile{
+        gap: 50px;
+     }
+}
+.grupo-fondo{
+    background-image: url(../assets/LOGO/equipo\ logo.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+    height: 500px;
+    
+
+    /*display: flex;
+    align-items: flex-start;
+    padding: 50px;*/
+    margin: 50px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas: 
+    "nav"   "title"
+     "us"    "foto"
+      "footer" "footer";
+      @include m.mobile{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas: "texto";
+        background-image: none;
+      }
+}

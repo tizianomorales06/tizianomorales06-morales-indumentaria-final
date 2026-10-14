@@ -1,0 +1,329 @@
+/*selector(etiqueta,class,id){
+    propiedad: valor;
+}*/
+/*--TIPOGRAFIAS--*/
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+/*  font-family: "Oswald", sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Meie+Script&display=swap');
+/*font-family: "Meie Script", cursive;*/
+
+/*hola profe, antes que este entregable hice el de sass y animation asi k voy a tener que comentar algo asi cumplo con los 3 commit q pide ticher*/
+
+
+/*--BODY--*/
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color:#F1F7ED;
+    font-family: "Oswald", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+/*--HEADER--*/
+.navbar navbar-expand-lg bg-body-tertiary{
+    background-color: #F1F7ED;
+}
+
+nav{
+    background-color: #F1F7ED;
+}
+.envios-header{ /*arreglo envios*/
+    display: flex;
+    justify-content: flex-start;
+    gap: 600px;
+}
+.subtitulo-envio{
+    text-align: center;
+    font-size: 2rem;
+    text-decoration: underline;
+    padding: 30px;
+    margin: 0;
+    
+}
+.link-envio{
+    border: none;
+    text-decoration: underline;
+    gap: 0;
+}
+.aparte{    /*arreglo contactanos,indumentaria y about us*/
+    display: flex;
+    justify-content: flex-start;
+    gap: 600px;
+}
+h1{
+   font-family:"Meie Script", cursive;
+    font-size: 2.5rem;
+    margin: 20px 0;
+    height: 50px;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid;
+    
+}
+header nav ul{
+    list-style: none;
+    display: flex;
+    margin: 25px;
+    padding: 0;
+    gap: 20px;
+}
+/*li{
+    border: 1.5px solid #000;
+    border-radius: 5px;
+    
+}
+li:hover{
+    background-color: grey;
+    color: #fff;
+}*/
+nav a{
+    text-decoration: none;
+    color: #000000;
+    padding: 5px 10px;
+    display: block;
+}
+/*--MAIN--*/
+.somos{
+    height: 100px;
+    font-size: 35px;
+}
+
+.grilla-carruseles{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+.item-carrusel{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.carousel-item img{
+    
+    height: 300px;
+    object-fit: contain;
+    background:#000000;
+}
+
+
+.grupo-fondo{
+    background-image: url(../assets/LOGO/equipo\ logo.png);
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+    height: 500px;
+    
+
+    /*display: flex;
+    align-items: flex-start;
+    padding: 50px;*/
+    margin: 50px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas: 
+    "nav"   "title"
+     "us"    "foto"
+      "footer" "footer";
+}
+.grupo-fondo:hover{
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+.container{
+    background-image: url("../assets/LOGO/logo.png");
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+    height: 500px;
+
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    margin: 50px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: 1fr,1fr;
+    grid-template-areas: 
+    "title" "img";
+}
+section{
+    padding: 20px;
+}
+/*--FOOTER--*/
+.instagram{
+    position: fixed;
+    height: 60px;
+    bottom: 10px;
+    right: 10px;
+}
+.facebook{
+    position: fixed;
+    height: 60px;
+    bottom: 10px;
+    right: 120px;
+}
+.twitter{
+    position: fixed;
+    height: 70px;
+    bottom: 10px;
+    right: 230px;
+}
+.copyright{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    font-size: 12px;
+}
+
+@media (min-width: 502px) and (max-width: 1024px) { /*RESPONSIVE*/
+    body {
+        min-height: 100vh;
+        font-size: 14px;
+        padding: 20px;
+        margin: 10px;
+
+    }
+    h1{
+        font-size: 30px;
+        text-align: center;
+    }
+    nav a{
+        padding: 5px 5px;
+    }
+    .somos{
+        font-size: 30px;
+        
+    }
+    .aparte{
+        gap: 220px;
+    }
+    .envios-header{
+        gap: 220px;
+    }
+    .grupo-fondo{
+        height: 230px;
+    }
+    .container{
+        padding: 20px;
+
+        
+    }
+    .logo-fondo{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: center right;
+        gap: 20px;
+
+    }
+    .instagram{
+    position: fixed;
+    height: 40px;
+    }
+    .facebook{
+    position: fixed;
+    height: 40px;
+    }
+    .twitter{
+    position: fixed;
+    height: 40px;
+
+    }
+}
+@media (min-width: 300px) and (max-width: 500px) { /*RESPONSIVE*/
+    body {
+        font-size: 12px;
+        padding: 10px;
+        margin: 5px;
+
+    }
+    h1{
+        font-size: 25px;
+        text-align: center;
+    }
+    header{
+        display: inline;
+        border: none;
+
+
+    }
+    
+    nav a{
+        padding: 3px 3px;
+
+
+    }
+    .somos{
+        font-size: 25px;
+        
+    }
+    .grilla-carruseles{
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+    .carousel-item img{
+        height: 250px;
+    }
+    .carousel-control-prev, .carousel-control-next{
+        height: 250px;
+    }
+    .logo-fondo{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: center right;
+        gap: 20px;
+
+    }
+    .instagram{
+    position: fixed;
+    height: 30px;
+    bottom: 10px;
+    right: 10px;
+    }
+    .facebook{
+    position: fixed;
+    height: 30px;
+    bottom: 10px;
+    right: 50px;
+    }
+    .twitter{
+    position: fixed;
+    height: 35px;
+    bottom: 10px;
+    right: 85px;
+    
+    }
+    .aparte{
+    gap: 50px;
+    }
+    .envios-header{
+    gap: 50px;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: center right;
+        gap: 20px;
+        background-image: none;
+    }
+    .grupo-fondo{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: "texto";
+    background-image: none;
+    
+    }
+}
+
+
+
