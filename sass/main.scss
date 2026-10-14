@@ -1,10 +1,16 @@
 @use "./utilities/reset";
+@use "./utilities/animation";
 
-@use "./components/header";
-@use "./components/footer";
+@use "./layout/header";
+@use "./layout/nav";
+@use "./layout/footer";
 
 @use "./pages/home";
 @use "./pages/indumentaria";
+@use "./pages/contacto";
 @use "./pages/envios";
 @use "./pages/nosotros";
-@use "./pages/contacto";
+
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap/scss/navbar.scss";

@@ -5,25 +5,34 @@ section{
     .somos{
          height: 100px;
          font-size: 35px;
+         @include m.tablet{
+            font-size: 30px;
+         }
+         @include m.mobile{
+            font-size: 25px;
+         }
     }
     
     .container{
-        background-image: url("../assets/LOGO/logo.png");
-     background-repeat: no-repeat;
-     background-position: center right;
-     background-size: contain;
-     height: 500px;
+        background-image: url(../assets/logo.png);
+        background-repeat: no-repeat;
+        background-position: center right;
+        background-size: contain;
+         height: 500px;
 
-     display: flex;
-     align-items: center;
-     padding: 50px;
-     margin: 50px;
-     display: grid;
-     grid-template-columns: repeat(2,1fr);
-     grid-template-rows: 1fr,1fr;
-     grid-template-areas: 
-     "title" "img";
-     @include m.mobile{
+         display: flex;
+         align-items: center;
+         padding: 50px;
+         margin: 50px;
+         display: grid;
+        grid-template-columns: repeat(2,1fr);
+         grid-template-rows: 1fr,1fr;
+         grid-template-areas: 
+         "title" "img";
+         @include m.tablet{
+        padding: 20px;
+        }
+       @include m.mobile{
         display: flex;
         flex-direction: column;
         justify-content: flex-start;

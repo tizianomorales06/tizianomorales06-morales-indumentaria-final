@@ -1,8 +1,11 @@
 @use "../utilities/variables" as v;
 @use "../utilities/mixin" as m;
 .aparte{
-    @extend flex-start;
+    @include m.flex-start;
     gap: 600px;
+    @include m.tablet{
+        gap: 220px;
+    }
     @include m.mobile{
         gap: 50px;
      }
@@ -26,6 +29,9 @@
     "nav"   "title"
      "us"    "foto"
       "footer" "footer";
+      @include m.tablet{
+        height: 230px;
+      }
       @include m.mobile{
         display: grid;
         grid-template-columns: 1fr;

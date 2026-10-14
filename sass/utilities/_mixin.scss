@@ -7,8 +7,17 @@
   gap: $gap;
   
 }
+@mixin tablet  {
+  @media (min-width: 502px) and (max-width: 1024px) {
+    @content;
+  }
+}
 @mixin mobile  {
   @media (min-width: 300px) and (max-width: 500px) {
     @content;
   }
+}
+@mixin flex-start {
+  display: flex;
+  justify-content: flex-start;
 }

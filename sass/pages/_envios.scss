@@ -1,8 +1,11 @@
 @use "../utilities/variables" as v;
 @use "../utilities/mixin" as m;
  .envios-header{
-    @extend flex-start;
+    @include m.flex-start;
     gap: 600px;
+    @include m.tablet{
+        gap: 220px;
+    }
     @include m.mobile{
         gap: 50px;
         

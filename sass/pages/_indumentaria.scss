@@ -1,9 +1,41 @@
 @use "../utilities/variables" as v;
 @use "../utilities/mixin" as m;
 .aparte{
-    @extend flex-start;
+    @include m.flex-start;
     gap: 600px;
+    @include m.tablet{
+        gap: 220px;
+    }
     @include m.mobile{
         gap: 50px;
      }
+}
+.grilla-carruseles{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding: 20px;
+    
+    @include m.mobile{
+        grid-template-columns: 1fr;
+        padding:10px;
+     }
+    .item-carrusel{
+    text-align: center;
+    margin-bottom: 20px;
+    }
+    .carousel-item img{
+        height: 300px;
+        object-fit: contain;
+        background: #0000;
+        @include m.mobile{
+            height: 250px;
+        }
+    }
+    .carousel-control-prev, .carousel-control-next{
+        @include m.mobile{
+            height: 250px;
+
+        }
+    }
 }

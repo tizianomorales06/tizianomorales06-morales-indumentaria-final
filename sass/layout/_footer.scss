@@ -1,9 +1,15 @@
 @use "../utilities/variables" as v;
+@use "../utilities/mixin" as m;
 .instagram{
     position: fixed;
     height: 60px;
     bottom: 10px;
     right: 10px;
+    @include m.tablet{
+        height: 40px;
+        bottom: 10px;
+        right: 10px;
+    }
     @include m.mobile{
         height: 30px;
         bottom: 10px;
@@ -15,6 +21,11 @@
     height: 60px;
     bottom: 10px;
     right: 120px;
+    @include m.tablet{
+        height: 40px;
+        bottom: 10px;
+        right: 50px;
+    }
     @include m.mobile{
         height: 30px;
         bottom: 10px;
@@ -26,6 +37,11 @@
     height: 70px;
     bottom: 10px;
     right: 230px;
+    @include m.tablet{
+        height: 50px;
+        bottom: 10px;
+        right: 85px;
+    }
     @include m.mobile{
         height: 35px;
         bottom: 10px;

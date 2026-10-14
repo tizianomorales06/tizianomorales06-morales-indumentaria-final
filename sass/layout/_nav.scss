@@ -1,0 +1,26 @@
+@use "../utilities/variables" as v;
+@use "../utilities/mixin" as m;
+
+nav{
+    background-color: v.$bg-color;
+    ul{
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid;
+        a{
+            text-decoration:none;
+            color:#000000;
+            padding: 5px 10px;
+            display: block;
+            @include m.tablet{
+                padding: 5px 5px;
+            }
+            @include m.mobile{
+                padding: 3px 3px;
+            }
+        }
+    }
+
+}
